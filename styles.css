@@ -93,3 +93,12 @@ button {
 	height: 100vh;
 	z-index: 1000;
 }
+
+#modal h1 {
+	color: white;
+}
+
+/*#modal button {
+	width: 100px;
+	height: 50px;
+}*/

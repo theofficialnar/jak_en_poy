@@ -20,7 +20,7 @@ document.getElementById('paper').onclick=function(){
 		else if (aiInput === "rock"){
 		document.getElementById('result').innerHTML =  playerName + " Win!";
 		playerScore++;
-		document.getElementById('playerScore').innerHTML = playerName + playerScore;
+		document.getElementById('playerScore').innerHTML = playerName + " : " + playerScore;
 		}
 		else {
 		document.getElementById('result').innerHTML = "Tie!";
@@ -44,7 +44,7 @@ document.getElementById('rock').onclick=function(){
 		else if (aiInput === "scissors"){
 		document.getElementById('result').innerHTML =  playerName + " Win!";
 		playerScore++;
-		document.getElementById('playerScore').innerHTML = playerName + playerScore;
+		document.getElementById('playerScore').innerHTML = playerName + " : " + playerScore;
 		}
 		else {
 		document.getElementById('result').innerHTML = "Tie!";
@@ -68,7 +68,7 @@ document.getElementById('scissors').onclick=function(){
 		else if (aiInput === "paper"){
 		document.getElementById('result').innerHTML =  playerName + " Win!";
 		playerScore++;
-		document.getElementById('playerScore').innerHTML = playerName + playerScore;
+		document.getElementById('playerScore').innerHTML = playerName + " : " + playerScore;
 		}
 		else {
 		document.getElementById('result').innerHTML = "Tie!";
