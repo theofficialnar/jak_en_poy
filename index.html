@@ -3,17 +3,29 @@
 <head>
 	<meta charset="utf-8">
 	<title>Test</title>
-	<script src="jquery-3.2.1.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="styles.css">
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="styles/styles.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
 	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
 </head>
-<body>	
-	<div id="modal">
-			<h1>Welcome</h1>
-			<input type="text" id="playerName">
-			<button id="btn-playerName">Submit</button>
+<body>
+	<div class="row" id="modal">
+		<div class="col s12 m12 l12 xl12" id="modal-cntnr">
+			<div class="container">
+				<h1>Welcome!</h1>
+				<div class="col s12 m12 l12 xl12">
+					<input type="text" id="playerName" placeholder="Input Player Name">
+				</div>
+				<div class="col s12 m12 l12 xl12">
+					<button id="btn-playerName">Submit</button>
+				</div>
+			</div>
+		</div>
 	</div>
+
+
 	<main>
 
 		<div class="ai-text-cntnr">
@@ -46,7 +58,7 @@
 		</div>
 	</main>
 
-	<script type="text/javascript" src="game.js"></script>
+	<script type="text/javascript" src="js/game.js"></script>
 
 </body>
 </html>
