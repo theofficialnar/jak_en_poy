@@ -55,7 +55,7 @@ body {
 }
 
 main {
-	background: url('../monitor.png');
+	background: url('../images/monitor.png');
 	background-position: top center;
 	background-size: 800px 800px;
 	background-repeat: no-repeat;
@@ -158,4 +158,16 @@ main button {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+}
+
+.selection {
+  text-align: center !important;
+  right: 64px;
+  top: -70% !important;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  height: 100%;
+  left: 25% !important;
+  width: 500px;
+  /*width 100% only goes to width of button container */
 }

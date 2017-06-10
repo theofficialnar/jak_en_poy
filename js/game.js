@@ -4,82 +4,87 @@ var playerScore = 0;
 var playerName;
 
 
-document.getElementById('paper').onclick=function(){
-	var input = document.getElementById('paper').value;
+$('#paper').click(function(){
+	var input = $(this).data('value');
 	var counter = Math.floor((Math.random() * 3) + 0);
 	var aiInput = aiAnswers[counter];
-	document.getElementById('aiInputText').innerHTML = "Computer chooses " + aiInput;
-	document.getElementById('plyrInput').innerHTML = playerName + " choose " + input;
+	$('#aiInputText').html("Computer chooses " + aiInput);
+	$('#plyrInput').html(playerName + " choose " + input);
 
 	if (input === "paper") {
 		if (aiInput === "scissors"){
-		document.getElementById('result').innerHTML =  playerName + " lose!";
+		$('#result').html(playerName + " lose!");
 		aiScore++;
-		document.getElementById('aiScore').innerHTML = "AI: " + aiScore;
+		$('#aiScore').html("AI: " + aiScore);
 		}
+
 		else if (aiInput === "rock"){
-		document.getElementById('result').innerHTML =  playerName + " Win!";
+		$('#result').html(playerName + " Win!");
 		playerScore++;
-		document.getElementById('playerScore').innerHTML = playerName + " : " + playerScore;
+		$('#playerScore').html(playerName + " : " + playerScore);
 		}
+
 		else {
-		document.getElementById('result').innerHTML = "Tie!";
+		$('#result').html("Tie!");
 		}
 	}
-}
+});
 
-document.getElementById('rock').onclick=function(){
-	var input = document.getElementById('rock').value;
+$('#rock').click(function(){
+	var input = $(this).data('value');
 	var counter = Math.floor((Math.random() * 3) + 0);
 	var aiInput = aiAnswers[counter];
-	document.getElementById('aiInputText').innerHTML = "Computer chooses " + aiInput;
-	document.getElementById('plyrInput').innerHTML =  playerName + " choose " + input;
+	$('#aiInputText').html("Computer chooses " + aiInput);
+	$('#plyrInput').html(playerName + " choose " + input);
 
 	if (input === "rock") {
 		if (aiInput === "paper"){
-		document.getElementById('result').innerHTML =  playerName + " lose!";
+		$('#result').html(playerName + " lose!");
 		aiScore++;
-		document.getElementById('aiScore').innerHTML = "AI: " + aiScore;
+		$('#aiScore').html("AI: " + aiScore);
 		}
+
 		else if (aiInput === "scissors"){
-		document.getElementById('result').innerHTML =  playerName + " Win!";
+		$('#result').html(playerName + " Win!");
 		playerScore++;
-		document.getElementById('playerScore').innerHTML = playerName + " : " + playerScore;
+		$('#playerScore').html(playerName + " : " + playerScore);
 		}
+
 		else {
-		document.getElementById('result').innerHTML = "Tie!";
+		$('#result').html("Tie!");
 		}
 	}
-}
+});
 
-document.getElementById('scissors').onclick=function(){
-	var input = document.getElementById('scissors').value;
+$('#scissors').click(function(){
+	var input = $('#scissors').data('value');
 	var counter = Math.floor((Math.random() * 3) + 0);
 	var aiInput = aiAnswers[counter];
-	document.getElementById('aiInputText').innerHTML = "Computer chooses " + aiInput;
-	document.getElementById('plyrInput').innerHTML =  playerName + " choose " + input;
+	$('#aiInputText').html("Computer chooses " + aiInput);
+	$('#plyrInput').html(playerName + " choose " + input);
 	
 	if (input === "scissors") {
 		if (aiInput === "rock"){
-		document.getElementById('result').innerHTML =  playerName + " lose!";
+		$('#result').html(playerName + " lose!");
 		aiScore++;
-		document.getElementById('aiScore').innerHTML = "AI: " + aiScore;
+		$('#aiScore').html("AI: " + aiScore);
 		}
+
 		else if (aiInput === "paper"){
-		document.getElementById('result').innerHTML =  playerName + " Win!";
+		$('#result').html(playerName + " Win!");
 		playerScore++;
-		document.getElementById('playerScore').innerHTML = playerName + " : " + playerScore;
+		$('#playerScore').html(playerName + " : " + playerScore);
 		}
+
 		else {
-		document.getElementById('result').innerHTML = "Tie!";
+		$('#result').html("Tie!");
 		}
 	}
-}
+});
 
-document.getElementById('btn-playerName').onclick=function(){
-	playerName = document.getElementById('playerName').value
-	// alert(playerName);
-}
+$('#btn-playerName').click(function(){
+	playerName = $('#playerName').val();
+});
 
 $(window).on('load',function(){
 	$('#modal').show();
